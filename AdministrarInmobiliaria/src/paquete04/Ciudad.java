@@ -7,8 +7,30 @@ package paquete04;
 
 /**
  *
- * @author reroes
+ * @author PR
  */
 public class Ciudad {
+    
+    private String ciudad;
+    private String provincia;
+    
+    public Ciudad(String cd, String prov){
+        ciudad = cd;
+        provincia = prov;
+    }
+    
+    public void establecerCiudad(String n){
+        ciudad = n;
+    }
+    public void establecerProvincia(String n){
+        ciudad = n;
+    }
+    
+    public String establecerCiudad(){
+        return ciudad;
+    }
+    public String establecerProvincia(){
+        return provincia;
+    }
     
 }
