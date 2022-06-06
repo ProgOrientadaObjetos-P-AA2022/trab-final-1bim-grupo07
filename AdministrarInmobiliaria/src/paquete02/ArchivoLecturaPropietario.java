@@ -42,7 +42,7 @@ public class ArchivoLecturaPropietario {
                     Propietario registro = (Propietario) entrada.readObject();
                     propietarios.add(registro);
                 } catch (EOFException endOfFileException) {
-                    break;
+                    return;
                 } catch (IOException ex) {
                     System.err.println("Error al leer el archivo: " + ex);
                 } catch (ClassNotFoundException ex) {
