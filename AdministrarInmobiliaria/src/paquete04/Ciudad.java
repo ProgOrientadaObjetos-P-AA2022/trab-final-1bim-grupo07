@@ -26,10 +26,10 @@ public class Ciudad {
         ciudad = n;
     }
     
-    public String establecerCiudad(){
+    public String obtenerCiudad(){
         return ciudad;
     }
-    public String establecerProvincia(){
+    public String obtenerProvincia(){
         return provincia;
     }
     

@@ -12,9 +12,9 @@ package paquete05;
 public class Constructora {
     
     private String nombre;
-    private int id;
+    private String id;
     
-    public Constructora(String nom, int _id){
+    public Constructora(String nom, String _id){
         nombre = nom;
         id = _id;
     }
@@ -22,14 +22,14 @@ public class Constructora {
     public void establecerNombre(String n){
         nombre = n;
     }
-    public void establecerID(int n){
+    public void establecerID(String n){
         id = n;
     }
     
     public String obtenerNombre(){
         return nombre;
     }
-    public int obtenerID(){
+    public String obtenerID(){
         return id;
     }
 }
