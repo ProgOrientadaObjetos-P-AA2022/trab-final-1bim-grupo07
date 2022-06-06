@@ -1,8 +1,14 @@
 package paquete06;
-import java.io.*;
-import java.util.*;
+
+import java.io.EOFException;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.util.ArrayList;
 
 public class ArchivoLecturaCasa {
+    
     private ObjectInputStream entrada;
     private ArrayList<Casa> casas;
     private String nombreArchivo;
@@ -19,6 +25,10 @@ public class ArchivoLecturaCasa {
                 System.out.println("Error al abrir el archivo" + ioException);
             } 
         }
+    }
+    
+    public void establecerNombreArchivo(String n) {
+        nombreArchivo = n;
     }
     
     public void establecerCasa() {
@@ -42,12 +52,6 @@ public class ArchivoLecturaCasa {
 
     }
     
-    public void establecerNombreArchivo(String n) {
-        nombreArchivo = n;
-    }
-   
-    
-    
     public ArrayList<Casa> obtenerCasa() {
         return casas;
     }
@@ -55,9 +59,6 @@ public class ArchivoLecturaCasa {
     public String obtenerNombreArchivo() {
         return nombreArchivo;
     }
-    
-    
-        
     
     @Override
     public String toString() {

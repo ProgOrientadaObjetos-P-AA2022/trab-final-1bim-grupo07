@@ -28,6 +28,10 @@ public class ArchivoLecturaCiudad {
         }
     }
     
+    public void establecerNombreArchivo(String n) {
+        nombreArchivo = n;
+    }
+    
     public void establecerCiudades() {
         ciudades = new ArrayList<>();
         File f = new File(nombreArchivo);
@@ -49,22 +53,14 @@ public class ArchivoLecturaCiudad {
 
     }
     
-    public void establecerNombreArchivo(String n) {
-        nombreArchivo = n;
-    }
-    
     public void establecerIdentificador(String n) {
         identificador = n;
     }
     
     public void establecerCiudadBuscada() {
-        
         File f = new File(nombreArchivo);
-
         while (true) {
-            
             if (f.exists()) {
-                
                 try {
                     Ciudad registro = (Ciudad) entrada.readObject();
                     if(registro.obtenerCiudad().equals(identificador)){

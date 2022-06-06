@@ -1,8 +1,17 @@
 
 package paquete06;
-import java.io.*;
-import java.util.*;
+
+import java.io.EOFException;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.util.ArrayList;
+
+
+
 public class ArchivoLecturaDepartamento {
+    
     private ObjectInputStream entrada;
     private ArrayList<Departamento> departamentos;
     private String nombreArchivo;

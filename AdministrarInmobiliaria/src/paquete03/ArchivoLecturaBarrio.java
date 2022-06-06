@@ -28,6 +28,10 @@ public class ArchivoLecturaBarrio {
         }
     }
     
+    public void establecerNombreArchivo(String n) {
+        nombreArchivo = n;
+    }
+    
     public void establecerBarrios() {
         barrios = new ArrayList<>();
         File f = new File(nombreArchivo);
@@ -49,22 +53,14 @@ public class ArchivoLecturaBarrio {
 
     }
     
-    public void establecerNombreArchivo(String n) {
-        nombreArchivo = n;
-    }
-    
     public void establecerIdentificador(String n) {
         identificador = n;
     }
     
-    public void establecerBarrioBuscado() {
-        
+    public void establecerBarrioBuscado() {      
         File f = new File(nombreArchivo);
-
-        while (true) {
-            
+        while (true) {  
             if (f.exists()) {
-                
                 try {
                     Barrio registro = (Barrio) entrada.readObject();
                     if(registro.obtenerNombre().equals(identificador)){

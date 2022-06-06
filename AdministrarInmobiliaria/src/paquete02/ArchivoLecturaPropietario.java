@@ -35,10 +35,9 @@ public class ArchivoLecturaPropietario {
     
     public void establecerPropietarios() {
         propietarios = new ArrayList<>();
-        File f = new File(nombreArchivo);
+        File f = new File(obtenerNombreArchivo());
         if (f.exists()) {
             while (true) {
-                
                 try {
                     Propietario registro = (Propietario) entrada.readObject();
                     propietarios.add(registro);
@@ -61,9 +60,7 @@ public class ArchivoLecturaPropietario {
     
     public void establecerPropietarioBuscado() {
         File f = new File(obtenerNombreArchivo());
-        System.out.println("5");
         while (true) {
-            System.out.println("6");
             if (f.exists()) {
                 try {
                     Propietario registro = (Propietario) entrada.readObject();

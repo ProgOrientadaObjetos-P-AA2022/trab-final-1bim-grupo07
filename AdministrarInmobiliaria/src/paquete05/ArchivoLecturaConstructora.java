@@ -28,6 +28,10 @@ public class ArchivoLecturaConstructora {
         }
     }
     
+    public void establecerNombreArchivo(String n) {
+        nombreArchivo = n;
+    }
+    
     public void establecerConstructoras() {
         constructoras = new ArrayList<>();
         File f = new File(nombreArchivo);
@@ -49,20 +53,13 @@ public class ArchivoLecturaConstructora {
 
     }
     
-    public void establecerNombreArchivo(String n) {
-        nombreArchivo = n;
-    }
-    
     public void establecerIdentificador(String n) {
         identificador = n;
     }
     
     public void establecerConstructoraBuscada() {
-        
         File f = new File(nombreArchivo);
-
         while (true) {
-            
             if (f.exists()) {
                 
                 try {

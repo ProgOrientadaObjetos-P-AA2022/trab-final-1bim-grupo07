@@ -18,7 +18,8 @@ public class Departamento  {
     private String ubicacionEd;
     private Constructora constructora;
     
-    public Departamento(Propietario p, double pM,double mM,double aM, Barrio b,Ciudad c,String nE,String uE,Constructora cons){
+    public Departamento(Propietario p, double pM,double mM,double aM, Barrio b,
+            Ciudad c,String nE,String uE,Constructora cons){
         propietario = p;
         precioMetro = pM;
         numMetros = mM;
@@ -45,9 +46,8 @@ public class Departamento  {
         alicuotaMen = n;
     }
     
-    public void establecerValorF(){
-        valorF = ((numMetros * precioMetro) 
-                + (alicuotaMen * 12));
+    public void calcularCostoFinal(){
+        valorF = ((numMetros * precioMetro) + (alicuotaMen * 12));
     }
     
     public void establecerBarrio(Barrio n){
